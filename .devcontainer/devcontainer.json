@@ -8,7 +8,8 @@
 		"--privileged"
 	],
 	"mounts": [
-		"source=dind-var-lib-docker,target=/var/lib/docker,type=volume"
+		"source=dind-var-lib-docker,target=/var/lib/docker,type=volume",
+		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
 	],
 	"overrideCommand": false,
 	// Set *default* container specific settings.json values on container create.
@@ -34,7 +35,8 @@
 		"ms-python.python",
 		"visualstudioexptteam.vscodeintellicode",
 		"amazonwebservices.aws-toolkit-vscode",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"GitHub.copilot"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
