@@ -1,0 +1,244 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "vpc-stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "vpc-stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "vpc-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://268674271179/us-east-1",
+      "properties": {
+        "templateFile": "vpc-stack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::268674271179:role/cdk-hnb659fds-deploy-role-268674271179-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::268674271179:role/cdk-hnb659fds-cfn-exec-role-268674271179-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-268674271179-us-east-1/b5c6cf533662ecd139bffa27fac9882c5fe8bee90dce791588754ac5f24bb542.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "vpc-stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::268674271179:role/cdk-hnb659fds-lookup-role-268674271179-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "vpc-stack.assets"
+      ],
+      "metadata": {
+        "/vpc-stack/vpc-stack/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstack9850254B"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1Subnet0E5E4AB3"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1RouteTableCE456516"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1RouteTableAssociation08758EEE"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1DefaultRoute2CF52754"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1EIP6FE92291"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet1NATGatewayF490612C"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet2Subnet81EA6BF1"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet2RouteTableECC26869"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet2RouteTableAssociationD43D2AE0"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Public-Subnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPublicSubnet2DefaultRoute200ECC8F"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet1Subnet45CB5B83"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet1RouteTableA67B3B8D"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet1RouteTableAssociation73AD44DD"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet1DefaultRouteFF2381FA"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet2SubnetA7375EA6"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet2RouteTable5EA5EE35"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet2RouteTableAssociation735DEE9F"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Private-Subnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackPrivateSubnet2DefaultRouteDCA6871F"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet1Subnet79FB5EEA"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet1RouteTableA9791A24"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet1RouteTableAssociation73B17743"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet2Subnet844DBFB6"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet2RouteTable866C7733"
+          }
+        ],
+        "/vpc-stack/vpc-stack/Isolated-Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIsolatedSubnet2RouteTableAssociation3BB2A547"
+          }
+        ],
+        "/vpc-stack/vpc-stack/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackIGW395AA3AF"
+          }
+        ],
+        "/vpc-stack/vpc-stack/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcstackVPCGW539305B9"
+          }
+        ],
+        "/vpc-stack/VpcId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcId"
+          }
+        ],
+        "/vpc-stack/IsolatedSubnet-us-east-1a": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsolatedSubnetuseast1a"
+          }
+        ],
+        "/vpc-stack/IsolatedSubnet-us-east-1b": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsolatedSubnetuseast1b"
+          }
+        ],
+        "/vpc-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/vpc-stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/vpc-stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "vpc-stack"
+    }
+  }
+}
